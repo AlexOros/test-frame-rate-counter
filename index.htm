@@ -30,11 +30,16 @@
       }
 
       .speed-container {
+        width: fit-content;
         margin-top: 1rem;
         font-size: inherit;
         display: flex;
         align-items: center;
         gap: 1rem;
+      }
+
+      .legend {
+        font-size: 18px;
       }
 
       .controls {
@@ -52,11 +57,12 @@
   <body>
     <section class="controls">
       <button id="control-button">Start</button>
-      <div class="speed-container">
+      <fieldset class="speed-container">
+        <legend class='legend'>Update rate in seconds</legend>
         <button class="speed-change">↑</button>
         <div id="speed"></div>
         <button class="speed-change">↓</button>
-      </div>
+      </fieldset>
     </section>
     <section id="container"></section>
   </body>
