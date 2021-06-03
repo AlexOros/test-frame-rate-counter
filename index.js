@@ -9,7 +9,7 @@ const initCounter = () => {
   const counterElements = new Array(42).fill('').map(() => document.createElement('div'));
 
   let resetCode = null;
-  let speed = 500 / 1000;
+  let speed = 300 / 1000;
   let counter = 0;
   speedEl.textContent = speed.toFixed(2)
 
