@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/index.js" defer></script>
+    <style type="text/css">
+      body {
+        background: #242e42;
+        font-family: Roboto;
+        font-size: 30px;
+        max-height: 100vh;
+        overflow: hidden;
+      }
+
+      button {
+        font-weight: bold;
+        font-size: inherit;
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      #container :nth-child(even) {
+        margin-top: -1rem;
+      }
+
+      .speed-container {
+        margin-top: 1rem;
+        font-size: inherit;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .controls {
+        padding: 2rem 0.5rem;
+        border-bottom: 3px solid #303b53;
+        color: white;
+      }
+
+      .counter {
+        color: #05c985;
+        font-size: 96px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="controls">
+      <button id="control-button">Start</button>
+      <div class="speed-container">
+        <button class="speed-change">↑</button>
+        <div id="speed">13</div>
+        <button class="speed-change">↓</button>
+      </div>
+    </section>
+    <section id="container"></section>
+  </body>
+</html>
