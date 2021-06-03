@@ -11,9 +11,7 @@ const initCounter = () => {
   let resetCode = null;
   let speed = 500 / 1000;
   let counter = 0;
-
-  const setNewSpeedToEl = () => speedEl.textContent = speed.toFixed(2)
-  setNewSpeedToEl()
+  speedEl.textContent = speed.toFixed(2)
 
   counterElements.forEach(element => {
     element.className = "counter"
@@ -23,12 +21,11 @@ const initCounter = () => {
   speedButtonEl.forEach(el => el.addEventListener('click', (ev) => {
     if (ev.target.textContent === '↑') {
       speed += 0.1;
-      setNewSpeedToEl()
     } else {
       speed -= 0.1;
       if (speed < 0) speed = 0;
-      setNewSpeedToEl()
     }
+    speedEl.textContent = speed.toFixed(2)
   }))
 
   controlButtonEl.addEventListener('click', () => {
